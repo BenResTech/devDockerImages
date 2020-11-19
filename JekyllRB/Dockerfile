@@ -16,4 +16,4 @@ RUN apt-get update \
     zlib1g-dev \
  && rm -rf /var/lib/apt/lists/*
 
-RUN gem install jekyll:3.9.0 bundler
+RUN gem install jekyll bundler
