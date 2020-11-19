@@ -9,6 +9,7 @@ RUN apt-get update \
     g++ \
     gcc \
     make \
+    zlib1g \
  && rm -rf /var/lib/apt/lists/*
 
 RUN gem install jekyll bundler
