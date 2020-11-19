@@ -5,6 +5,10 @@ RUN apt-get update \
     apt-utils \
  && apt-get install -y \
     ruby \
+    ruby-dev \
+    g++ \
     gcc \
     make \
  && rm -rf /var/lib/apt/lists/*
+
+RUN gem install jekyll bundler
