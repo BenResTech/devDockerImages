@@ -21,6 +21,11 @@ docker build . -t [image purpose]
 
 This will then make the image available for use as `[image purpose]:latest` for a Docker run command.
 
-Each directory contains a Docker Compose file for deploying the image as a Docker Stack onto a Docker Swarm.
+The container can then be used to develop with by changing into the directory containing the source files you are interested in and then running the container with the local directory mounted inside it:
 
-This allows automatic restarting of the container if it fails, and allows for things such as mounting in source file directories in a consistent way.
+```bash
+cd [source file directory]
+docker container run -it -v $(pwd):/code [image purpose]:latest bash
+```
+
+This makes the source code files available inside the container environment at the `/code` directory.
